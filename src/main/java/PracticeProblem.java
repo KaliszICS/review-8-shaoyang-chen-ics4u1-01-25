@@ -7,13 +7,13 @@ public class PracticeProblem {
 	public static String pluralize(String word){
         String lowWord = word.toLowerCase();
         if (lowWord.endsWith("ife")) {
-            return word.substring(0, word.length() - 3) + "ives";
+            return "ives";
         } else if (lowWord.endsWith("ey")) {
-            return word.substring(0, word.length() - 2) + "eys";
+            return "eys";
         } else if (lowWord.endsWith("y")) {
-            return word.substring(0, word.length() - 1) + "ies";
+            return "ies";
         } else {
-            return word + "s";
+            return "s";
         }
     }
     public static int min(int num1, int num2, int num3) {
@@ -26,12 +26,15 @@ public class PracticeProblem {
         if (year % 4 == 0) {
             if (year % 100 == 0) {
                 if (year % 400 == 0) {
+                    return false;
+                } else {
                     return true;
                 }
+            } else {
                 return true;
             }
-            return true;
+        } else {
+            return false;
         }
-        return false;
     }
 }
