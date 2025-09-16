@@ -31,10 +31,11 @@ public class PracticeProblem {
                     return false;
                 }
             } else {
-                return false;
+                return true;
             }
         } else {
-            return true;
+            return false;
         }
     }
+
 }
